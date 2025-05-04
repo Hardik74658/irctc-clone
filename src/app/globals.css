@@ -1,0 +1,130 @@
+/* Add these custom animations at the end of your globals.css file */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes trainMovement {
+  0% {
+    transform: translateX(-50px) translateY(10px);
+  }
+  50% {
+    transform: translateX(30px) translateY(-15px);
+  }
+  100% {
+    transform: translateX(-50px) translateY(10px);
+  }
+}
+
+@keyframes moveTrain {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  50% { 
+    transform: translate(40px, -10px) scale(1.05); 
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulse-slight {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-features-in > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-features-in > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-features-in > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-features-in > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-features-in > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-features-in > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-features-in > *:nth-child(6) { animation-delay: 0.6s; }
+
+.animate-float {
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-train-movement {
+  animation: moveTrain 10s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: pulse-gentle 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease forwards;
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-pulse-slight {
+  animation: pulse-slight 2s infinite ease-in-out;
+}
